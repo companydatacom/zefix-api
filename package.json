@@ -1,7 +1,7 @@
 {
   "name": "@companydata/zefix-api",
-  "version": "0.1.0",
-  "description": "Swiss Zefix register company data with full addresses, contacts and directors, through one REST call. A thin convenience layer over @companydata/companydata-sdk, pinned to CH.",
+  "version": "0.2.0",
+  "description": "Zefix API wrapper: Swiss company data from the Zefix central business name index with full addresses, phone, email, website and firmographics, through one REST call. A thin layer over @companydata/companydata-sdk, pinned to CH.",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -29,13 +29,21 @@
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run clean && npm run typecheck && npm run build",
     "pack:check": "npm pack --dry-run",
-    "publish:public": "npm publish --access public"
+    "publish:public": "npm publish --access public",
+    "test:live": "npx -y tsx examples/quickstart.ts"
   },
   "keywords": [
+    "zefix",
     "zefix-api",
-    "ch",
+    "uid",
+    "handelsregister",
+    "switzerland",
+    "swiss",
+    "firmen",
     "company-data",
     "business-register",
+    "company-search",
+    "b2b-data",
     "sdk",
     "typescript"
   ],
